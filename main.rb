@@ -1,5 +1,4 @@
 require 'watir'
-require 'pry'
 browser = Watir::Browser.new
 
 link = ARGV[0]
