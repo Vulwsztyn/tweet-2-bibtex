@@ -13,10 +13,11 @@ browser.close
 
 result = "@misc{placeholder_name,
   author = {#{author[0]} - #{author[1]}},
-  title = {#{text}},
+  title = {#{text.gsub('%', '\%')}},
   year = {#{date_parsed.year}},
   month = {#{date_parsed.month}},
   day = {#{date_parsed.day}},
+  timestamp = {#{date_parsed.year}-#{date_parsed.month}-#{date_parsed.day}},
   howpublished = {\\url{#{link.gsub(/x\.com/, 'twitter.com')}}},
   note = {Accessed: #{Date.today.iso8601}}
 }"
