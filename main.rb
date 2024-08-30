@@ -13,7 +13,7 @@ browser.close
 
 result = "@misc{placeholder_name,
   author = {#{author[0]} - #{author[1]}},
-  title = {#{text.gsub(/[&%]/) {|x| "\\#{x}"}}},
+  title = {#{text.gsub(/[&%$]/) {|x| "\\#{x}"}}},
   year = {#{date_parsed.year}},
   month = {#{date_parsed.month}},
   day = {#{date_parsed.day}},
